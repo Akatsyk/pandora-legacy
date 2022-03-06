@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Beta|Win32">
+      <Configuration>Beta</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Beta|x64">
+      <Configuration>Beta</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug loader|Win32">
+      <Configuration>Debug loader</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug loader|x64">
+      <Configuration>Debug loader</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Developer|Win32">
+      <Configuration>Developer</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Developer|x64">
+      <Configuration>Developer</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Stable build|Win32">
+      <Configuration>Stable build</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Stable build|x64">
+      <Configuration>Stable build</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{A437D8C7-EFDA-444A-B941-5CEFCD40C2F6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CounterStrikeGlobalOffensive</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <ProjectName>csgo_legacy</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Stable build|Win32'">
+    <PlatformToolset>v141</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Developer|Win32'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug loader|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Stable build|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Developer|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug loader|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Stable build|Win32'">
+    <IncludePath>$(ProjectDir)Libraries;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(ProjectDir)Libraries\Freetype\include;D:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Libraries;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(ProjectDir)Libraries\cryptopp\Win32\Output\Release;$(ProjectDir)Libraries\Freetype;$(NETFXKitsDir)Lib\um\x86;D:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetExt>.dll</TargetExt>
+    <IntDir>$(SolutionDir)$(Configuration)\Intermediate\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Developer|Win32'">
+    <IncludePath>$(ProjectDir)Libraries;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;D:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Libraries;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(ProjectDir)Libraries\cryptopp\Win32\Output\Release;$(ProjectDir)Libraries\Freetype;$(NETFXKitsDir)Lib\um\x86;D:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetExt>.dll</TargetExt>
+    <IntDir>$(SolutionDir)$(Configuration)\Intermediate\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">
+    <IncludePath>$(ProjectDir)Libraries;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(ProjectDir)Libraries\Freetype\include;D:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Libraries;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(ProjectDir)Libraries\cryptopp\Win32\Output\Release;$(ProjectDir)Libraries\Freetype;$(NETFXKitsDir)Lib\um\x86;D:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetExt>.dll</TargetExt>
+    <IntDir>$(SolutionDir)$(Configuration)\Intermediate\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>$(ProjectName)_beta</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug loader|Win32'">
+    <IncludePath>$(ProjectDir)Libraries;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(ProjectDir)Libraries\Freetype\include;D:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Libraries;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(ProjectDir)Libraries\cryptopp\Win32\Output\Release;$(ProjectDir)Libraries\Freetype;$(NETFXKitsDir)Lib\um\x86;D:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetExt>.dll</TargetExt>
+    <IntDir>$(SolutionDir)$(Configuration)\Intermediate\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Stable build|Win32'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>USE_XOR;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Custom</Optimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>
+      </StringPooling>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Developer|Win32'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>DEV;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Beta|Win32'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>USE_XOR;NDEBUG;BETA_MODE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Custom</Optimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>
+      </StringPooling>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug loader|Win32'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>USE_XOR;NDEBUG;DEBUG_MODE;BETA_MODE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Custom</Optimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Features\Miscellaneous\WeatherController.cpp" />
+    <ClCompile Include="Features\Rage\AnimationSystem.cpp" />
+    <ClCompile Include="Features\Rage\AntiAim.cpp" />
+    <ClCompile Include="Features\Miscellaneous\AutoBuy.cpp" />
+    <ClCompile Include="Features\Rage\Autowall.cpp" />
+    <ClCompile Include="Features\Rage\Resolver.cpp" />
+    <ClCompile Include="Features\Rage\ZeusBot.cpp" />
+    <ClCompile Include="Hooking\Hooks\BeginFrame.cpp" />
+    <ClCompile Include="Features\Miscellaneous\BulletBeamTracer.cpp" />
+    <ClCompile Include="Features\Visuals\CChams.cpp" />
+    <ClCompile Include="Hooking\Hooks\RetrieveMessage.cpp" />
+    <ClCompile Include="Loader\Exports.cpp" />
+    <ClCompile Include="Loader\Security\Security.cpp" />
+    <ClCompile Include="Renderer\Wrapper\sprite\sprite.cpp" />
+    <ClCompile Include="SDK\Classes\CClientState.cpp" />
+    <ClCompile Include="SDK\Classes\CCSGO_HudDeathNotice.cpp" />
+    <ClCompile Include="SDK\Classes\IInputSystem.cpp" />
+    <ClCompile Include="SDK\Valve\characterset.cpp" />
+    <ClCompile Include="Utils\CrashHandler.cpp" />
+    <ClCompile Include="Hooking\Hooks\DispatchUserMessage.cpp" />
+    <ClCompile Include="Hooking\Hooks\IsBoxVisible.cpp" />
+    <ClCompile Include="Hooking\Hooks\IsConnected.cpp" />
+    <ClCompile Include="Hooking\Hooks\IsPlayingDemo.cpp" />
+    <ClCompile Include="Utils\LogSystem.cpp" />
+    <ClCompile Include="Menu\Elements.cpp" />
+    <ClCompile Include="Menu\Framework\Button\Button.cpp" />
+    <ClCompile Include="Menu\Framework\Checkbox\Checkbox.cpp" />
+    <ClCompile Include="Menu\Framework\ColorPicker\ColorPicker.cpp" />
+    <ClCompile Include="Menu\Framework\Dropdown\Dropdown.cpp" />
+    <ClCompile Include="Menu\Framework\Form\Form.cpp" />
+    <ClCompile Include="Menu\Framework\Group\Group.cpp" />
+    <ClCompile Include="Menu\Framework\GUI.cpp" />
+    <ClCompile Include="Menu\Framework\Hotkey\Hotkey.cpp" />
+    <ClCompile Include="Menu\Framework\Label\Label.cpp" />
+    <ClCompile Include="Menu\Framework\Listbox\Listbox.cpp" />
+    <ClCompile Include="Menu\Framework\MultiDropdown\MultiDropdown.cpp" />
+    <ClCompile Include="Menu\Framework\Slider\Slider.cpp" />
+    <ClCompile Include="Menu\Framework\Textbox\Textbox.cpp" />
+    <ClCompile Include="Menu\Helpers\InputHelper.cpp" />
+    <ClCompile Include="Hooking\Hooks\OnSoundStarted.cpp" />
+    <ClCompile Include="Utils\Config.cpp" />
+    <ClCompile Include="SDK\core.cpp" />
+    <ClCompile Include="SDK\Classes\CPlayerResource.cpp" />
+    <ClCompile Include="Hooking\Hooks\CreateMove.cpp" />
+    <ClCompile Include="SDK\Classes\CUserCmd.cpp" />
+    <ClCompile Include="SDK\CVariables.cpp" />
+    <ClCompile Include="SDK\Displacement.cpp" />
+    <ClCompile Include="Hooking\Hooks\DoPostScreenEffects.cpp" />
+    <ClCompile Include="Hooking\Hooks\DrawModel.cpp" />
+    <ClCompile Include="Hooking\Hooks\EmitSound.cpp" />
+    <ClCompile Include="SDK\Classes\entity.cpp" />
+    <ClCompile Include="Features\Visuals\ESP.cpp" />
+    <ClCompile Include="Features\Visuals\EventLogger.cpp" />
+    <ClCompile Include="Features\Rage\ExtendedBactrack.cpp" />
+    <ClCompile Include="Features\Visuals\ExtendedEsp.cpp" />
+    <ClCompile Include="Features\Rage\FakeLag.cpp" />
+    <ClCompile Include="Hooking\Hooks\FrameStageNotify.cpp" />
+    <ClCompile Include="Features\Miscellaneous\GameEvent.cpp" />
+    <ClCompile Include="Hooking\Hooks\GetScreenAspectRatio.cpp" />
+    <ClCompile Include="Features\Visuals\Glow.cpp" />
+    <ClCompile Include="Features\Visuals\GrenadePrediction.cpp" />
+    <ClCompile Include="Features\Visuals\Hitmarker.cpp" />
+    <ClCompile Include="SDK\Classes\IBaseClientDll.cpp" />
+    <ClCompile Include="SDK\Classes\IClientEntityList.cpp" />
+    <ClCompile Include="SDK\Classes\IConVar.cpp" />
+    <ClCompile Include="SDK\Classes\IEngineTrace.cpp" />
+    <ClCompile Include="SDK\Classes\IGameMovement.cpp" />
+    <ClCompile Include="SDK\Classes\IInput.cpp" />
+    <ClCompile Include="SDK\Classes\IMemAlloc.cpp" />
+    <ClCompile Include="SDK\Classes\IMoveHelper.cpp" />
+    <ClCompile Include="Utils\InputSys.cpp" />
+    <ClCompile Include="Hooking\Hooks\InterpolateServerEntities.cpp" />
+    <ClCompile Include="SDK\Classes\IPanel.cpp" />
+    <ClCompile Include="SDK\Classes\IPrediction.cpp" />
+    <ClCompile Include="SDK\Classes\ISurface.cpp" />
+    <ClCompile Include="SDK\Classes\IVEngineClient.cpp" />
+    <ClCompile Include="Features\Miscellaneous\KitParser.cpp" />
+    <ClCompile Include="Features\Rage\KnifeBot.cpp" />
+    <ClCompile Include="Features\Rage\LagCompensation.cpp" />
+    <ClCompile Include="Hooking\Hooks\ListLeavesInBox.cpp" />
+    <ClCompile Include="Hooking\Hooks\LockCursor.cpp" />
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="Utils\Math.cpp" />
+    <ClCompile Include="SDK\Valve\Matrix.cpp" />
+    <ClCompile Include="Libraries\minhook-master\src\buffer.c" />
+    <ClCompile Include="Libraries\minhook-master\src\hde\hde32.c" />
+    <ClCompile Include="Libraries\minhook-master\src\hde\hde64.c" />
+    <ClCompile Include="Libraries\minhook-master\src\hook.c" />
+    <ClCompile Include="Libraries\minhook-master\src\trampoline.c" />
+    <ClCompile Include="Features\Miscellaneous\Miscellaneous.cpp" />
+    <ClCompile Include="Features\Miscellaneous\Movement.cpp" />
+    <ClCompile Include="Hooking\Hooks\OverrideView.cpp" />
+    <ClCompile Include="Hooking\Hooks\PacketStart.cpp" />
+    <ClCompile Include="Hooking\Hooks\PaintTraverse.cpp" />
+    <ClCompile Include="SDK\Valve\platform.cpp" />
+    <ClCompile Include="SDK\Classes\Player.cpp" />
+    <ClCompile Include="SDK\Classes\PlayerAnimState.cpp" />
+    <ClCompile Include="Hooking\Hooks\PlayerHooks.cpp" />
+    <ClCompile Include="Features\Game\Prediction.cpp" />
+    <ClCompile Include="Hooking\Hooks\Present.cpp" />
+    <ClCompile Include="SDK\Classes\PropManager.cpp" />
+    <ClCompile Include="SDK\Valve\qangle.cpp" />
+    <ClCompile Include="Features\Rage\Ragebot.cpp" />
+    <ClCompile Include="SDK\RayTracer.cpp" />
+    <ClCompile Include="Hooking\Hooks\RecvProxyHooks.cpp" />
+    <ClCompile Include="Renderer\Render.cpp" />
+    <ClCompile Include="Hooking\Hooks\RenderView.cpp" />
+    <ClCompile Include="Hooking\Hooks\Reset.cpp" />
+    <ClCompile Include="Features\Rage\ShotInformation.cpp" />
+    <ClCompile Include="Hooking\Hooks\RunCommand.cpp" />
+    <ClCompile Include="SDK\Utils\PatternScan.cpp" />
+    <ClCompile Include="SDK\sdk.cpp" />
+    <ClCompile Include="Hooking\Hooks\SendNetMsg.cpp" />
+    <ClCompile Include="Hooking\Hooks\SetReservationCookie.cpp" />
+    <ClCompile Include="Features\Game\SetupBones.cpp" />
+    <ClCompile Include="Features\Game\SimulationContext.cpp" />
+    <ClCompile Include="Features\Miscellaneous\SkinChanger.cpp" />
+    <ClCompile Include="source.cpp" />
+    <ClCompile Include="SDK\Utils\Print.cpp" />
+    <ClCompile Include="Features\Rage\TickbaseShift.cpp" />
+    <ClCompile Include="Utils\Threading\atomic_lock.cpp" />
+    <ClCompile Include="Utils\Threading\mutex.cpp" />
+    <ClCompile Include="Utils\Threading\packed_heap.cpp" />
+    <ClCompile Include="Utils\Threading\semaphores.cpp" />
+    <ClCompile Include="Utils\Threading\shared_mutex.cpp" />
+    <ClCompile Include="Utils\Threading\threading.cpp" />
+    <ClCompile Include="SDK\Valve\UtlBuffer.cpp" />
+    <ClCompile Include="SDK\Valve\vector.cpp" />
+    <ClCompile Include="SDK\Valve\vector2d.cpp" />
+    <ClCompile Include="SDK\Valve\vector4d.cpp" />
+    <ClCompile Include="Features\Miscellaneous\VisibilityOptimization.cpp" />
+    <ClCompile Include="SDK\Utils\vmt_swap.cpp" />
+    <ClCompile Include="SDK\Classes\weapon.cpp" />
+    <ClCompile Include="Hooking\Hooks\WriteUsercmdDeltaToBuffer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Features\Game\SimulationContext.hpp" />
+    <ClInclude Include="Features\Miscellaneous\WeatherController.hpp" />
+    <ClInclude Include="Features\Rage\AnimationSystem.hpp" />
+    <ClInclude Include="Features\Rage\AntiAim.hpp" />
+    <ClInclude Include="Features\Rage\Resolver.hpp" />
+    <ClInclude Include="Features\Rage\ZeusBot.hpp" />
+    <ClInclude Include="Loader\Exports.h" />
+    <ClInclude Include="Loader\Security\Security.hpp" />
+    <ClInclude Include="Renderer\Textures\weaponicons.h" />
+    <ClInclude Include="Renderer\Wrapper\font\font.h" />
+    <ClInclude Include="Renderer\Wrapper\sprite\sprite.h" />
+    <ClInclude Include="SDK\Classes\IInputSystem.hpp" />
+    <ClInclude Include="SDK\Classes\INetworkStringTable.h" />
+    <ClInclude Include="SDK\Utils\auto.hpp" />
+    <ClInclude Include="Features\Miscellaneous\AutoBuy.hpp" />
+    <ClInclude Include="Features\Rage\Autowall.h" />
+    <ClInclude Include="Features\Miscellaneous\BulletBeamTracer.hpp" />
+    <ClInclude Include="SDK\Valve\CBaseHandle.hpp" />
+    <ClInclude Include="Features\Visuals\CChams.hpp" />
+    <ClInclude Include="SDK\Classes\CClientState.hpp" />
+    <ClInclude Include="SDK\Classes\CCSGO_HudDeathNotice.hpp" />
+    <ClInclude Include="SDK\Valve\characterset.hpp" />
+    <ClInclude Include="SDK\CColor.hpp" />
+    <ClInclude Include="Utils\Config.hpp" />
+    <ClInclude Include="SDK\core.hpp" />
+    <ClInclude Include="SDK\Classes\CPlayerResource.hpp" />
+    <ClInclude Include="Utils\CrashHandler.hpp" />
+    <ClInclude Include="SDK\Classes\CStudioRender.hpp" />
+    <ClInclude Include="SDK\Classes\CUserCmd.hpp" />
+    <ClInclude Include="SDK\CVariables.hpp" />
+    <ClInclude Include="SDK\Classes\DataMap.hpp" />
+    <ClInclude Include="SDK\Definitions.hpp" />
+    <ClInclude Include="Utils\defs.hpp" />
+    <ClInclude Include="SDK\Displacement.hpp" />
+    <ClInclude Include="SDK\Classes\entity.hpp" />
+    <ClInclude Include="Features\Visuals\ESP.hpp" />
+    <ClInclude Include="Features\Visuals\EventLogger.hpp" />
+    <ClInclude Include="SDK\Classes\Exploits.hpp" />
+    <ClInclude Include="Features\Rage\ExtendedBactrack.hpp" />
+    <ClInclude Include="Features\Visuals\ExtendedEsp.hpp" />
+    <ClInclude Include="Features\Rage\FakeLag.hpp" />
+    <ClInclude Include="Utils\FnvHash.hpp" />
+    <ClInclude Include="Libraries\freetype\freetype\config\ftconfig.h" />
+    <ClInclude Include="Libraries\freetype\freetype\config\ftheader.h" />
+    <ClInclude Include="Libraries\freetype\freetype\config\ftmodule.h" />
+    <ClInclude Include="Libraries\freetype\freetype\config\ftoption.h" />
+    <ClInclude Include="Libraries\freetype\freetype\config\ftstdlib.h" />
+    <ClInclude Include="Libraries\freetype\freetype\freetype.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftadvanc.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftbbox.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftbdf.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftbitmap.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftbzip2.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftcache.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftchapters.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftcid.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftdriver.h" />
+    <ClInclude Include="Libraries\freetype\freetype\fterrdef.h" />
+    <ClInclude Include="Libraries\freetype\freetype\fterrors.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftfntfmt.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftgasp.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftglyph.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftgxval.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftgzip.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftimage.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftincrem.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftlcdfil.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftlist.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftlzw.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftmac.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftmm.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftmodapi.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftmoderr.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftotval.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftoutln.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftparams.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftpfr.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftrender.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftsizes.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftsnames.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftstroke.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftsynth.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftsystem.h" />
+    <ClInclude Include="Libraries\freetype\freetype\fttrigon.h" />
+    <ClInclude Include="Libraries\freetype\freetype\fttypes.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ftwinfnt.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\autohint.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\cffotypes.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\cfftypes.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftcalc.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftdebug.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftdrv.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\fthash.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftmemory.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftobjs.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftpic.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftpsprop.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftrfork.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftserv.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftstream.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\fttrace.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\ftvalid.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\internal.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\psaux.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\pshints.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svcfftl.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svcid.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svkern.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svmm.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svotval.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svprop.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\sfnt.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\t1types.h" />
+    <ClInclude Include="Libraries\freetype\freetype\internal\tttypes.h" />
+    <ClInclude Include="Libraries\freetype\freetype\t1tables.h" />
+    <ClInclude Include="Libraries\freetype\freetype\ttnameid.h" />
+    <ClInclude Include="Libraries\freetype\freetype\tttables.h" />
+    <ClInclude Include="Libraries\freetype\freetype\tttags.h" />
+    <ClInclude Include="Libraries\freetype\ft2build.h" />
+    <ClInclude Include="Features\Miscellaneous\GameEvent.hpp" />
+    <ClInclude Include="Features\Visuals\Glow.hpp" />
+    <ClInclude Include="SDK\Classes\GlowOutlineEffect.hpp" />
+    <ClInclude Include="Features\Visuals\GrenadePrediction.hpp" />
+    <ClInclude Include="Features\Visuals\Hitmarker.hpp" />
+    <ClInclude Include="Hooking\Hooked.hpp" />
+    <ClInclude Include="Hooking\Hooker.hpp" />
+    <ClInclude Include="SDK\Includes.hpp" />
+    <ClInclude Include="SDK\Classes\IAppSystem.hpp" />
+    <ClInclude Include="SDK\Classes\IBaseClientDll.hpp" />
+    <ClInclude Include="SDK\Classes\ICenterPrint.hpp" />
+    <ClInclude Include="SDK\Classes\IClientEntity.hpp" />
+    <ClInclude Include="SDK\Classes\IClientEntityList.hpp" />
+    <ClInclude Include="SDK\Classes\IClientLeafSystem.hpp" />
+    <ClInclude Include="SDK\Classes\IConVar.hpp" />
+    <ClInclude Include="SDK\Classes\IEngineSound.hpp" />
+    <ClInclude Include="SDK\Classes\IEngineTrace.hpp" />
+    <ClInclude Include="SDK\Classes\IGameEventManager.hpp" />
+    <ClInclude Include="SDK\Classes\IGameMovement.hpp" />
+    <ClInclude Include="SDK\Classes\IInput.hpp" />
+    <ClInclude Include="SDK\Classes\ILocalize.hpp" />
+    <ClInclude Include="SDK\Classes\IMaterialSystem.hpp" />
+    <ClInclude Include="SDK\Classes\IMemAlloc.hpp" />
+    <ClInclude Include="SDK\Classes\IMoveHelper.hpp" />
+    <ClInclude Include="SDK\Classes\INetChannel.hpp" />
+    <ClInclude Include="SDK\Classes\INetMessage.hpp" />
+    <ClInclude Include="Utils\InputSys.hpp" />
+    <ClInclude Include="SDK\Classes\IPanel.hpp" />
+    <ClInclude Include="SDK\Classes\IPhysics.hpp" />
+    <ClInclude Include="SDK\Classes\IPrediction.hpp" />
+    <ClInclude Include="SDK\Classes\ISteamClient.hpp" />
+    <ClInclude Include="SDK\Classes\IStudioRender.hpp" />
+    <ClInclude Include="SDK\Classes\ISurface.hpp" />
+    <ClInclude Include="SDK\Classes\IVDebugOverlay.hpp" />
+    <ClInclude Include="SDK\Classes\IVEngineClient.hpp" />
+    <ClInclude Include="SDK\Classes\IViewRender.hpp" />
+    <ClInclude Include="SDK\Classes\IViewRenderBeams.hpp" />
+    <ClInclude Include="SDK\Classes\IVModelInfo.hpp" />
+    <ClInclude Include="SDK\Classes\IVModelRender.hpp" />
+    <ClInclude Include="SDK\Classes\IVRenderView.hpp" />
+    <ClInclude Include="Libraries\json.h" />
+    <ClInclude Include="Features\Miscellaneous\KitParser.hpp" />
+    <ClInclude Include="Features\Rage\KnifeBot.hpp" />
+    <ClInclude Include="Features\Rage\LagCompensation.hpp" />
+    <ClInclude Include="Utils\lazy_importer.hpp" />
+    <ClInclude Include="Utils\LogSystem.hpp" />
+    <ClInclude Include="Utils\Math.h" />
+    <ClInclude Include="SDK\Valve\Matrix.hpp" />
+    <ClInclude Include="Menu\Elements.h" />
+    <ClInclude Include="Menu\Framework\Button\Button.h" />
+    <ClInclude Include="Menu\Framework\Checkbox\Checkbox.h" />
+    <ClInclude Include="Menu\Framework\ColorPicker\ColorPicker.h" />
+    <ClInclude Include="Menu\Framework\Dropdown\Dropdown.h" />
+    <ClInclude Include="Menu\Framework\Form\Form.h" />
+    <ClInclude Include="Menu\Framework\Group\Group.h" />
+    <ClInclude Include="Menu\Framework\GUI.h" />
+    <ClInclude Include="Menu\Framework\Hotkey\Hotkey.h" />
+    <ClInclude Include="Menu\Framework\Label\Label.h" />
+    <ClInclude Include="Menu\Framework\Listbox\Listbox.h" />
+    <ClInclude Include="Menu\Framework\MultiDropdown\MultiDropdown.h" />
+    <ClInclude Include="Menu\Framework\Slider\Slider.h" />
+    <ClInclude Include="Menu\Framework\Textbox\Textbox.h" />
+    <ClInclude Include="Menu\Helpers\Easing.h" />
+    <ClInclude Include="Menu\Helpers\InputHelper.h" />
+    <ClInclude Include="Libraries\minhook-master\include\MinHook.h" />
+    <ClInclude Include="Libraries\minhook-master\src\buffer.h" />
+    <ClInclude Include="Libraries\minhook-master\src\hde\hde32.h" />
+    <ClInclude Include="Libraries\minhook-master\src\hde\hde64.h" />
+    <ClInclude Include="Libraries\minhook-master\src\hde\pstdint.h" />
+    <ClInclude Include="Libraries\minhook-master\src\hde\table32.h" />
+    <ClInclude Include="Libraries\minhook-master\src\hde\table64.h" />
+    <ClInclude Include="Libraries\minhook-master\src\trampoline.h" />
+    <ClInclude Include="Features\Miscellaneous\Miscellaneous.hpp" />
+    <ClInclude Include="Features\Miscellaneous\Movement.hpp" />
+    <ClInclude Include="SDK\Valve\platform.hpp" />
+    <ClInclude Include="SDK\Classes\Player.hpp" />
+    <ClInclude Include="SDK\Classes\PlayerAnimState.hpp" />
+    <ClInclude Include="Features\Game\Prediction.hpp" />
+    <ClInclude Include="SDK\Classes\PropManager.hpp" />
+    <ClInclude Include="SDK\Valve\qangle.hpp" />
+    <ClInclude Include="SDK\Utils\PatternScan.hpp" />
+    <ClInclude Include="Features\Rage\Ragebot.hpp" />
+    <ClInclude Include="SDK\RayTracer.h" />
+    <ClInclude Include="SDK\Valve\recv_swap.hpp" />
+    <ClInclude Include="Renderer\Render.hpp" />
+    <ClInclude Include="Renderer\Textures\titlebar.h" />
+    <ClInclude Include="Features\Rage\ShotInformation.hpp" />
+    <ClInclude Include="Features\Game\SetupBones.hpp" />
+    <ClInclude Include="SDK\Utils\singleton.hpp" />
+    <ClInclude Include="SDK\Utils\Print.hpp" />
+    <ClInclude Include="Features\Miscellaneous\SkinChanger.hpp" />
+    <ClInclude Include="Utils\Threading\packed_heap.h" />
+    <ClInclude Include="Utils\syscall.hpp" />
+    <ClInclude Include="Features\Rage\TickbaseShift.hpp" />
+    <ClInclude Include="Utils\Threading\atomic_lock.h" />
+    <ClInclude Include="Utils\base64.h" />
+    <ClInclude Include="Utils\Threading\mutex.h" />
+    <ClInclude Include="Utils\Threading\semaphores.h" />
+    <ClInclude Include="Utils\Threading\shared_mutex.h" />
+    <ClInclude Include="Utils\Threading\threading.h" />
+    <ClInclude Include="SDK\Valve\UtlBuffer.hpp" />
+    <ClInclude Include="SDK\Valve\UtlMap.hpp" />
+    <ClInclude Include="SDK\Valve\UtlMemory.hpp" />
+    <ClInclude Include="SDK\Valve\UtlVector.hpp" />
+    <ClInclude Include="SDK\Utils\vcall.hpp" />
+    <ClInclude Include="SDK\Valve\vector.hpp" />
+    <ClInclude Include="SDK\Valve\vector2d.hpp" />
+    <ClInclude Include="SDK\Valve\vector4d.hpp" />
+    <ClInclude Include="Features\Miscellaneous\VisibilityOptimization.hpp" />
+    <ClInclude Include="SDK\Utils\vmt_swap.hpp" />
+    <ClInclude Include="SDK\Utils\os.hpp" />
+    <ClInclude Include="SDK\sdk.hpp" />
+    <ClInclude Include="source.hpp" />
+    <ClInclude Include="SDK\Classes\weapon.hpp" />
+    <ClInclude Include="SDK\Classes\WeaponInfo.hpp" />
+    <ClInclude Include="Utils\XorStr.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
